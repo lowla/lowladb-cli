@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var nn = require('nomnom');
+
+nn.command('dump')
+  .option('server', {
+    abbr: 's',
+    default: 'http://localhost:3000',
+    help: 'Server URL for both Syncer and Adapter'
+  })
+  .option('sequence', {
+    abbr: 'q',
+    default: 0,
+    help: 'Starting sequence for dump'
+  })
+  .option('file', {
+    abbr: 'f',
+    default: 'lowladb-dump.json',
+    help: 'Output file to create'
+  })
+  .option('syncer', {
+    abbr: 'y',
+    help: 'Server URL for Syncer; overrides --server'
+  })
+  .option('adapter', {
+    abbr: 'a',
+    help: 'Server URL for Adapter; overrides --server'
+  })
+  .callback(function(opts) {
+    require('../lib/dump.js').run(opts);
+  })
+  .help('Dump LowlaDB documents to file');
+
+nn.parse();
