@@ -1,4 +1,4 @@
-# LowlaDB-Cli [![Build Status](https://travis-ci.org/lowla/lowladb-cli.svg)](https://travis-ci.org/lowla/lowladb-cli)
+# LowlaDB-CLI [![Build Status](https://travis-ci.org/lowla/lowladb-cli.svg)](https://travis-ci.org/lowla/lowladb-cli)
 
 > The LowlaDB command line interface.
 
@@ -11,7 +11,7 @@ LowlaDB-Cli supports the following commands:
 ## lowladb dump ##
 
 Exports LowlaDB documents to a file.  The exported file can be used by the LowlaDB Browser client to import documents
-into its local data storage (see the [LowlaDB Browser](http://github.com/lowla/lowladb/README.md) documentation for
+into its local data storage (see the [LowlaDB Browser](http://github.com/lowla/lowladb) documentation for
 more info).
 
 `lowladb dump` takes the following arguments:
